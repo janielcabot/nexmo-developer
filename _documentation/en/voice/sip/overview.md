@@ -12,7 +12,8 @@ This document explains the relevant setup options.
 
 ### Endpoint
 
-You can send your [INVITE](https://en.wikipedia.org/wiki/List_of_SIP_request_methods) requests to the Vonage SIP endpoint: `sip.nexmo.com`.
+You can send your [INVITE](https://en.wikipedia.org/wiki/List_of_SIP_request_methods) requests to the Vonage SIP endpoints, depending on your region: `sip-us.vonage.com` (AMER), `sip-eu.vonage.com` (EMEA), `sip-ap.vonage.com` (APAC).
+
 
 ### Authentication
 
@@ -25,14 +26,24 @@ Every INVITE request is authenticated with Digest authentication:
 
 If your system is not enabled for [Service records](https://en.wikipedia.org/wiki/SRV_record) (SRV records), you should load balance between the two closest endpoints and set the remaining ones as backup. The Vonage SIP endpoints are:
 
-- `sip-eu1.nexmo.com` (London)
-- `sip-eu2.nexmo.com` (London)
-- `sip-eu-2-1.nexmo.com` (Amsterdam)
-- `sip-eu-2-2.nexmo.com` (Amsterdam)
-- `sip-ap1.nexmo.com` (Singapore)
-- `sip-ap2.nexmo.com` (Singapore)
-- `sip-us-2-1.nexmo.com` (Dallas)
-- `sip-us-2-2.nexmo.com` (Dallas)
+- `sip-us-3.vonage.com` (Virginia)
+  - Virginia Proxy 1:  `sip-us-3-1.vonage.com`
+  - Virginia Proxy 2:  `sip-us-3-2.vonage.com`
+- `sip-us-4.vonage.com` (Oregon)
+  - Oregon Proxy 1:  `sip-us-4-1.vonage.com`
+  - Oregon Proxy 2:  `sip-us-4-2.vonage.com`
+- `sip-ap-3.vonage.com` (Singapore)
+  - Singapore Proxy 1:  `sip-ap-3-1.vonage.com`
+  - Singapore Proxy 2:  `sip-ap-3-2.vonage.com`
+- `sip-ap-4.vonage.com` (Sydney)
+  - Sydney Proxy 1:  `sip-ap-4-1.vonage.com`
+  - Sydney Proxy 2:  `sip-ap-4-2.vonage.com`
+- `sip-eu-3.vonage.com` (Ireland)
+  - Ireland Proxy 1:  `sip-eu-3-1.vonage.com`
+  - Ireland Proxy 2:  `sip-eu-3-2.vonage.com`
+- `sip-eu-4.vonage.com` (Frankfurt)
+  - Frankfurt Proxy 1:  `sip-eu-4-1.vonage.com`
+  - Frankfurt Proxy 2:  `sip-eu-4-2.vonage.com`
 
 ### Recipient
 
@@ -40,7 +51,7 @@ Recipient numbers must be in [E.164](https://en.wikipedia.org/wiki/E.164) format
 
 ### Caller ID
 
-Set the Caller Line Identity (CLI) in the *From* header using [E.164](https://en.wikipedia.org/wiki/E.164). For example: `From: <sip:447700900000@sip.nexmo.com>`.
+Set the Caller Line Identity (CLI) in the *From* header using [E.164](https://en.wikipedia.org/wiki/E.164). For example: `From: <sip:447700900000@sip-eu.vonage.com>`.
 
 ### Codecs
 

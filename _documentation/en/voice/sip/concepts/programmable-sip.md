@@ -14,16 +14,16 @@ Vonage’s Programmable SIP enables you to integrate your existing SIP Infrastru
 
 A _Vonage SIP Domain_ contains configuration you need to connect to Vonage SIP endpoints and link to your Vonage application.
 
-To route a SIP call to your Vonage application, you need to create a unique Vonage domain, such as `yourcompany`. The domain name will form the SIP URI, for example `sip:number@yourcompany.sip-us.nexmo.com`, and any calls routed to that SIP URI will be routed to your application NCCO `answer_url`.
+To route a SIP call to your Vonage application, you need to create a unique Vonage domain, such as `yourcompany`. The domain name will form the SIP URI, for example `sip:number@yourcompany.sip-us.vonage.com`, and any calls routed to that SIP URI will be routed to your application NCCO `answer_url`.
 
 The authentication method will be determined within your configuration of the Vonage domain. Vonage will authenticate the request and forward it to your application.
 
 Some example domains:
 
 ```json
-yourcompany.sip-eu.nexmo.com
-98765@yourcompany.sip-us.nexmo.com
-12345@yourcompany.sip-ap.nexmo.com
+yourcompany.sip-eu.vonage.com
+98765@yourcompany.sip-us.vonage.com
+12345@yourcompany.sip-ap.vonage.com
 ```
 
 ## Voice Application
@@ -69,15 +69,15 @@ Calls made to a Programmable SIP domain must be handled at a regional level. You
 The following code will indicate to Vonage that you want this SIP call to be handled in the EU:
 
 ```
-sip:number@yourcompany.sip-eu.nexmo.com
+sip:number@yourcompany.sip-eu.vonage.com
 ```
 
 Available domains are the same as the A records:
 
 ```
-sip-us.nexmo.com: USA
-sip-eu.nexmo.com: Europe
-sip-ap.nexmo.com: Asia Pacific
+sip-us.vonage.com: USA
+sip-eu.vonage.com: Europe
+sip-ap.vonage.com: Asia Pacific
 ```
 
 ## Custom SIP Headers
@@ -98,7 +98,7 @@ The detailed documentation is [here](/voice/voice-api/ncco-reference#connect).
 
 The SIP Connect feature support will continue where you can dial your virtual number via your SIP endpoint that is attached to your application. _Digest Authentication_ is the accepted authentication method for SIP Connect.
 
-To test this functionality have your PBX forward calls to `sip.nexmo.com`. Here is an example of doing so with an Asterisk extension, transmitting a custom header that will be sent to your `answer_url`:
+To test this functionality have your PBX forward calls to `sip-us.vonage.com`. Here is an example of doing so with an Asterisk extension, transmitting a custom header that will be sent to your `answer_url`:
 
 ```
 exten => 69100,1,SIPAddHeader(X-UserId:ABC123)
