@@ -26,7 +26,7 @@ The Number Pools API allows you to perform a number of different operations on y
 
 > Note: Currently, the Number Pools API does not support deleting a pool. In order to have a pool removed, you [submit a request to Vonage Customer Support](https://help.nexmo.com/hc/en-us/requests/new).
 
-For additional information on the Number Pools API, refer to the [Vonage Knowledge Base article on Number Pools](https://nexmo.zendesk.com/knowledge/articles/4411966959380/en-us?brand_id=3270356).
+For additional information on the Number Pools API, refer to the [Vonage Knowledge Base article on Number Pools](https://api.support.vonage.com/hc/en-us/articles/4411966959380).
 
 ## Prerequisites
 
